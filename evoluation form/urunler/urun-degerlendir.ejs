@@ -1,0 +1,78 @@
+
+<%- include('../includes/head') %>
+<link rel="stylesheet" href="/evaluation.css">
+</head>
+<body>
+    
+<%- include('../includes/navigation') %>
+
+    <main>
+
+        <div class="container">
+            <form action="/urun/urun-degerlendir" method="POST">
+                <div class="evo-container">
+                    <div class="paragraf">
+                        <p>Aşağıda görmüş olduğunuz kutucuklar ürünün değerlendirme bölümüdür.1 Numaralı kutucuk en kötüyü 10 numaralı kutucuk en iyiyi temsil eder</p>
+                    </div>
+                    
+                    <div class="colors">
+                        <div class="color-item item-1">
+                            <div class="number">1</div>
+                        </div>
+                        <div class="color-item item-2">
+                            <div class="number">2</div>
+                        </div>
+                        <div class="color-item item-3">
+                            <div class="number">3</div>
+                        </div>
+                        <div class="color-item item-4">
+                            <div class="number">4</div>
+                        </div>
+                        <div class="color-item item-5">
+                            <div class="number">5</div>
+                        </div>
+                        <div class="color-item item-6">
+                            <div class="number">6</div>
+                        </div>
+                        <div class="color-item item-7">
+                            <div class="number">7</div>
+                        </div>
+                        <div class="color-item item-8">
+                            <div class="number">8</div>
+                        </div>
+                        <div class="color-item item-9">
+                            <div class="number">9</div>
+                        </div>
+                        <div class="color-item item-10">
+                            <div class="number">10</div>
+                        </div>
+                    </div>
+                    <div class="point">
+                        <select class="select" name="point" >
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </div>
+                    <div class="div-btn">
+                        <input type="hidden" name="ogrenciNo" value="<%= urun.userOgrenciNo %> ">
+                        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                        <button class="degerlendir-btn" type="submit"> Değerlendir</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+
+
+    </main>
+
+
+<%- include('../includes/end') %> 
